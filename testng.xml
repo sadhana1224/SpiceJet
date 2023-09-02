@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+		
+		<class name="com.spicejet.tests.SpicejetTest"/> 
+		<!-- 	<class name="com.spicejet.tests.SpicejetSignUpTest"/> -->
+			<class name="com.spicejet.tests.SpicejetLoginTest"/>
+			<class name="com.spicejet.tests.SpicejetOneWayTest"/>
+		<class name="com.spicejet.tests.SpicejetRoundTripTest"/>
+			<class name="com.spicejet.tests.SpicejetBookingTest"/>
+			
+		<class name="com.spicejet.utils.SeWrappers"/>
+		<class name="com.spicejet.utils.SpiceWrappers"/>
+		<class name="com.spicejet.utils.Reports" />
+		
+	<!--<class name="com.spicejet.tests.SpicejetLoginTest"/>  -->	
+		<!--<class name="com.spicejet.tests.SpicejetOneWayTest"/> --> 
+		
+			
+		
+		
+     
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
