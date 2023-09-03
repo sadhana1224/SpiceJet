@@ -93,7 +93,7 @@ public class SpicejetSignupPage extends SeWrappers{
 		
 		jsClick(sub);
 		
-		
+		Thread.sleep(8000);
 		
 	
 	}

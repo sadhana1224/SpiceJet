@@ -7,6 +7,7 @@ import com.spicejet.pages.SpicejetLoginPage;
 import com.spicejet.pages.SpicejetSignupPage;
 import com.spicejet.pages.SearchFlightOneWay_Page;
 import com.spicejet.pages.SearchFlightTwoWay_page;
+import com.spicejet.pages.SpicejetBookingFieldPage;
 import com.spicejet.pages.SpicejetBookingPage;
 
 
@@ -98,6 +99,13 @@ public class SpiceWrappers extends SeWrappers{
 	    {
 	    	ex.printStackTrace();
 	    }
+	}
+	public void validateBookingField() throws InterruptedException
+	{
+		
+		SpicejetBookingFieldPage sbfPage=PageFactory.initElements(driver, SpicejetBookingFieldPage.class);
+		sbfPage.bookingFields();
+
 	}
 
 }

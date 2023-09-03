@@ -28,7 +28,7 @@ public class SpicejetOneWayTest extends SeWrappers{
 			sw.oneWayFlight(20);
 			Reports.reportStep("PASS", "Search with valid credentials passed");
 			Thread.sleep(2000);
-			//screenshot("OneWay_valid");
+			screenshot("OneWay_valid");
 		}
 		catch(Exception ex)
 		{
@@ -37,10 +37,6 @@ public class SpicejetOneWayTest extends SeWrappers{
 		}
 	}
 	
-	@AfterMethod
-	public void closeBrowser()
-	{
-		driver.close();
-	}
+
 
 }

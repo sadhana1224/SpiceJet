@@ -1,152 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-03T00:20:20 IST" name="Suite" finished-at="2023-09-03T00:28:18 IST" duration-ms="477356">
+  <suite started-at="2023-09-03T21:29:55 IST" name="Suite" finished-at="2023-09-03T21:33:18 IST" duration-ms="202180">
     <groups>
     </groups>
-    <test started-at="2023-09-03T00:20:20 IST" name="Test" finished-at="2023-09-03T00:28:18 IST" duration-ms="477356">
+    <test started-at="2023-09-03T21:29:55 IST" name="Test" finished-at="2023-09-03T21:33:18 IST" duration-ms="202180">
       <class name="com.spicejet.utils.Reports">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:com.spicejet.utils.Reports@68c9133c]" started-at="2023-09-03T00:20:20 IST" name="startReport" finished-at="2023-09-03T00:20:20 IST" duration-ms="322" status="PASS">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:com.spicejet.utils.Reports@606e4010]" started-at="2023-09-03T21:29:55 IST" name="startReport" finished-at="2023-09-03T21:29:55 IST" duration-ms="522" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:com.spicejet.utils.Reports@68c9133c]" started-at="2023-09-03T00:28:18 IST" name="endReport" finished-at="2023-09-03T00:28:18 IST" duration-ms="269" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.spicejet.utils.Reports@606e4010]" started-at="2023-09-03T21:33:18 IST" name="endReport" finished-at="2023-09-03T21:33:19 IST" duration-ms="671" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
       </class> <!-- com.spicejet.utils.Reports -->
+      <class name="com.spicejet.tests.SpicejetBookingFieldTest">
+        <test-method signature="validateBookingField()[pri:0, instance:com.spicejet.tests.SpicejetBookingFieldTest@18271936]" started-at="2023-09-03T21:32:48 IST" name="validateBookingField" finished-at="2023-09-03T21:33:18 IST" duration-ms="29141" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateBookingField -->
+        <test-method is-config="true" signature="closeBrowsers()[pri:0, instance:com.spicejet.tests.SpicejetBookingFieldTest@18271936]" started-at="2023-09-03T21:33:18 IST" name="closeBrowsers" finished-at="2023-09-03T21:33:18 IST" duration-ms="326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowsers -->
+      </class> <!-- com.spicejet.tests.SpicejetBookingFieldTest -->
       <class name="com.spicejet.tests.SpicejetRoundTripTest">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.spicejet.tests.SpicejetRoundTripTest@5afa3c9]" started-at="2023-09-03T00:20:44 IST" name="launchBrowser" finished-at="2023-09-03T00:20:53 IST" duration-ms="9650" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.spicejet.tests.SpicejetRoundTripTest@3ba987b8]" started-at="2023-09-03T21:31:05 IST" name="launchBrowser" finished-at="2023-09-03T21:31:30 IST" duration-ms="24625" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="SearchRoundTripFlight()[pri:0, instance:com.spicejet.tests.SpicejetRoundTripTest@5afa3c9]" started-at="2023-09-03T00:20:53 IST" name="SearchRoundTripFlight" finished-at="2023-09-03T00:21:02 IST" duration-ms="8304" status="PASS">
+        <test-method signature="SearchRoundTripFlight()[pri:0, instance:com.spicejet.tests.SpicejetRoundTripTest@3ba987b8]" started-at="2023-09-03T21:31:30 IST" name="SearchRoundTripFlight" finished-at="2023-09-03T21:31:45 IST" duration-ms="15290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchRoundTripFlight -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.tests.SpicejetRoundTripTest@5afa3c9]" started-at="2023-09-03T00:21:02 IST" name="closeBrowser" finished-at="2023-09-03T00:21:02 IST" duration-ms="166" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
       </class> <!-- com.spicejet.tests.SpicejetRoundTripTest -->
       <class name="com.spicejet.tests.SpicejetLoginTest">
-        <test-method signature="loginSpiceJet()[pri:0, instance:com.spicejet.tests.SpicejetLoginTest@3f191845]" started-at="2023-09-03T00:20:29 IST" name="loginSpiceJet" finished-at="2023-09-03T00:20:29 IST" duration-ms="137" status="PASS">
+        <test-method signature="loginSpiceJet()[pri:0, instance:com.spicejet.tests.SpicejetLoginTest@793f29ff]" started-at="2023-09-03T21:30:06 IST" name="loginSpiceJet" finished-at="2023-09-03T21:30:31 IST" duration-ms="24188" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginSpiceJet -->
       </class> <!-- com.spicejet.tests.SpicejetLoginTest -->
       <class name="com.spicejet.tests.SpicejetTest">
-        <test-method signature="browserLaunch()[pri:0, instance:com.spicejet.tests.SpicejetTest@15bb5034]" started-at="2023-09-03T00:20:20 IST" name="browserLaunch" finished-at="2023-09-03T00:20:29 IST" duration-ms="8113" status="PASS">
+        <test-method signature="browserLaunch()[pri:0, instance:com.spicejet.tests.SpicejetTest@53fe15ff]" started-at="2023-09-03T21:29:55 IST" name="browserLaunch" finished-at="2023-09-03T21:30:06 IST" duration-ms="10964" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunch -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.tests.SpicejetTest@15bb5034]" started-at="2023-09-03T00:20:29 IST" name="closeBrowser" finished-at="2023-09-03T00:20:29 IST" duration-ms="166" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
       </class> <!-- com.spicejet.tests.SpicejetTest -->
       <class name="com.spicejet.tests.SpicejetBookingTest">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.spicejet.tests.SpicejetBookingTest@72035809]" started-at="2023-09-03T00:21:02 IST" name="launchBrowser" finished-at="2023-09-03T00:21:56 IST" duration-ms="54500" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.spicejet.tests.SpicejetBookingTest@3f191845]" started-at="2023-09-03T21:31:45 IST" name="launchBrowser" finished-at="2023-09-03T21:32:10 IST" duration-ms="24795" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="BookingFlight()[pri:0, instance:com.spicejet.tests.SpicejetBookingTest@72035809]" started-at="2023-09-03T00:21:56 IST" name="BookingFlight" finished-at="2023-09-03T00:28:18 IST" duration-ms="381470" status="PASS">
+        <test-method signature="BookingFlight()[pri:0, instance:com.spicejet.tests.SpicejetBookingTest@3f191845]" started-at="2023-09-03T21:32:10 IST" name="BookingFlight" finished-at="2023-09-03T21:32:48 IST" duration-ms="38568" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BookingFlight -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.tests.SpicejetBookingTest@72035809]" started-at="2023-09-03T00:28:18 IST" name="closeBrowser" finished-at="2023-09-03T00:28:18 IST" duration-ms="2" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=116.0.5845.141)
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5d3e712848b0808238ae8879095e9e77, close {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.141, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\GUESTU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60988}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60988/devtoo..., se:cdpVersion: 116.0.5845.141, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5d3e712848b0808238ae8879095e9e77]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=116.0.5845.141)
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5d3e712848b0808238ae8879095e9e77, close {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.141, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\GUESTU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60988}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60988/devtoo..., se:cdpVersion: 116.0.5845.141, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5d3e712848b0808238ae8879095e9e77
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:405)
-at com.spicejet.tests.SpicejetBookingTest.closeBrowser(SpicejetBookingTest.java:46)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
       </class> <!-- com.spicejet.tests.SpicejetBookingTest -->
       <class name="com.spicejet.tests.SpicejetOneWayTest">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.spicejet.tests.SpicejetOneWayTest@72cc7e6f]" started-at="2023-09-03T00:20:29 IST" name="launchBrowser" finished-at="2023-09-03T00:20:39 IST" duration-ms="10225" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:com.spicejet.tests.SpicejetOneWayTest@117159c0]" started-at="2023-09-03T21:30:31 IST" name="launchBrowser" finished-at="2023-09-03T21:30:55 IST" duration-ms="24110" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="SearchOneWayFlight()[pri:0, instance:com.spicejet.tests.SpicejetOneWayTest@72cc7e6f]" started-at="2023-09-03T00:20:39 IST" name="SearchOneWayFlight" finished-at="2023-09-03T00:20:43 IST" duration-ms="4404" status="PASS">
+        <test-method signature="SearchOneWayFlight()[pri:0, instance:com.spicejet.tests.SpicejetOneWayTest@117159c0]" started-at="2023-09-03T21:30:55 IST" name="SearchOneWayFlight" finished-at="2023-09-03T21:31:05 IST" duration-ms="10410" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchOneWayFlight -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.spicejet.tests.SpicejetOneWayTest@72cc7e6f]" started-at="2023-09-03T00:20:43 IST" name="closeBrowser" finished-at="2023-09-03T00:20:44 IST" duration-ms="162" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
       </class> <!-- com.spicejet.tests.SpicejetOneWayTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

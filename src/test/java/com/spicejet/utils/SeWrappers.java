@@ -1,3 +1,4 @@
+
 package com.spicejet.utils;
 
 import java.io.File;
@@ -243,10 +244,14 @@ public class SeWrappers {
 		{
 			Select sel = new Select(ele);
 			sel.selectByIndex(value);
+			Reports.reportStep("PASS", "SelectByIndex value is success ");
+
 		}
 		catch(Exception ex)
 		{
 			System.out.println("problem in selectBy index");
+			Reports.reportStep("FAIL", "Problem in SelectByIndex ");
+
 			ex.printStackTrace();
 		}
 	}
@@ -448,10 +453,14 @@ public class SeWrappers {
 		{
 			Actions act = new Actions(driver);
 			act.click(ele).build().perform();
+			Reports.reportStep("PASS", "Action click successs ");
+
 		}
 		catch(Exception ex)
 		{
 			System.out.println("problem in action click");
+			Reports.reportStep("FAIL", "Problem while clicking on the Actionclick ");
+
 			ex.printStackTrace();
 		}
 	}
@@ -462,6 +471,7 @@ public class SeWrappers {
 		{
 			Actions act = new Actions(driver);
 			act.contextClick(ele).build().perform();
+			
 		}
 		catch(Exception ex)
 		{
@@ -550,11 +560,15 @@ public class SeWrappers {
 		{
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			js.executeScript("window.scrollTo(0,"+y+";)");
+			Reports.reportStep("PASS", "JavascriptExecutor vertical scroll success");
+
 
 		}
 		catch(Exception ex)
 		{
 			System.out.println("problem in javascript executor vertical scroll");
+			Reports.reportStep("FAIL", "Problem in vertical scroll");
+
 			ex.printStackTrace();
 		}
 	}
@@ -609,10 +623,14 @@ public class SeWrappers {
 		{
 			JavascriptExecutor js=(JavascriptExecutor)driver;
 			js.executeScript("arguments[0].click();",ele);
+			Reports.reportStep("PASS", "JavascriptExecutor click success");
+
 		}
 		catch(Exception ex)
 		{
 			System.out.println("problem in javascript executor click method");
+			Reports.reportStep("FAIL", "Problem in JavascriptExecutor click ");
+
 			ex.printStackTrace();
 		}
 		
@@ -677,11 +695,15 @@ public class SeWrappers {
 					driver.switchTo().window(eachWindow);
 				}
 			}
+			Reports.reportStep("PASS", "Successfully switched the window ");
+
 
 		}
 		catch(Exception ex)
 		{
 			System.out.println("problem in window handling");
+			Reports.reportStep("FAIL", "Window Handling failed ");
+
 			ex.printStackTrace();
 		}
 	}
@@ -693,10 +715,14 @@ public class SeWrappers {
 		{
 			title=driver.getTitle();
 			System.out.println(title);
+			Reports.reportStep("PASS", "Successfully get the Title");
+
 		}
 		catch(Exception ex)
 		{
 			System.out.println("problem in getTitle method");
+			Reports.reportStep("FAIL", "Problem in get Title");
+
 			ex.printStackTrace();
 		}
 		return title;
@@ -724,9 +750,13 @@ public class SeWrappers {
 //			File dest= new File(System.getProperty("user.dir")+"/screenshots/"+screenshotName+".png");
 //			FileUtils.copyFile(source, dest);			
 			Reports.takeScreeenShot(driver,screenshotName);
+			Reports.reportStep("PASS", "Successfully take the Screenshot");
+
 		}
 		catch(Exception ex)
 		{
+			Reports.reportStep("FAIL", "Screenshot failed");
+
 			ex.printStackTrace();
 		}
 	}

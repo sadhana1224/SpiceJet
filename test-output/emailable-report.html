@@ -9,32 +9,11 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">477,356</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">202,180</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.spicejet.tests.SpicejetBookingTest</td><td><a href="#m0">closeBrowser</a></td><td rowspan="1">1693681098225</td><td rowspan="1">2</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.spicejet.tests.SpicejetBookingTest</td><td><a href="#m1">BookingFlight</a></td><td rowspan="1">1693680716753</td><td rowspan="1">381470</td></tr><tr class="passedodd"><td rowspan="1">com.spicejet.tests.SpicejetLoginTest</td><td><a href="#m2">loginSpiceJet</a></td><td rowspan="1">1693680629195</td><td rowspan="1">137</td></tr><tr class="passedeven"><td rowspan="1">com.spicejet.tests.SpicejetOneWayTest</td><td><a href="#m3">SearchOneWayFlight</a></td><td rowspan="1">1693680639563</td><td rowspan="1">4404</td></tr><tr class="passedodd"><td rowspan="1">com.spicejet.tests.SpicejetRoundTripTest</td><td><a href="#m4">SearchRoundTripFlight</a></td><td rowspan="1">1693680653780</td><td rowspan="1">8304</td></tr><tr class="passedeven"><td rowspan="1">com.spicejet.tests.SpicejetTest</td><td><a href="#m5">browserLaunch</a></td><td rowspan="1">1693680620902</td><td rowspan="1">8113</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.spicejet.tests.SpicejetBookingFieldTest</td><td><a href="#m0">validateBookingField</a></td><td rowspan="1">1693756968977</td><td rowspan="1">29141</td></tr><tr class="passedodd"><td rowspan="1">com.spicejet.tests.SpicejetBookingTest</td><td><a href="#m1">BookingFlight</a></td><td rowspan="1">1693756930401</td><td rowspan="1">38568</td></tr><tr class="passedeven"><td rowspan="1">com.spicejet.tests.SpicejetLoginTest</td><td><a href="#m2">loginSpiceJet</a></td><td rowspan="1">1693756806959</td><td rowspan="1">24188</td></tr><tr class="passedodd"><td rowspan="1">com.spicejet.tests.SpicejetOneWayTest</td><td><a href="#m3">SearchOneWayFlight</a></td><td rowspan="1">1693756855257</td><td rowspan="1">10410</td></tr><tr class="passedeven"><td rowspan="1">com.spicejet.tests.SpicejetRoundTripTest</td><td><a href="#m4">SearchRoundTripFlight</a></td><td rowspan="1">1693756890308</td><td rowspan="1">15290</td></tr><tr class="passedodd"><td rowspan="1">com.spicejet.tests.SpicejetTest</td><td><a href="#m5">browserLaunch</a></td><td rowspan="1">1693756795983</td><td rowspan="1">10964</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.spicejet.tests.SpicejetBookingTest#closeBrowser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=116.0.5845.141)
-Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5d3e712848b0808238ae8879095e9e77, close {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.141, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\GUESTU~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60988}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60988/devtoo..., se:cdpVersion: 116.0.5845.141, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5d3e712848b0808238ae8879095e9e77
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:405)
-	at com.spicejet.tests.SpicejetBookingTest.closeBrowser(SpicejetBookingTest.java:46)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.spicejet.tests.SpicejetBookingFieldTest#validateBookingField</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">com.spicejet.tests.SpicejetBookingTest#BookingFlight</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">com.spicejet.tests.SpicejetLoginTest#loginSpiceJet</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m3">com.spicejet.tests.SpicejetOneWayTest#SearchOneWayFlight</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>

@@ -17,6 +17,7 @@ public class SpicejetLoginTest extends SeWrappers
 	try
 	{
 		Reports.setTCDesc("Validating login functionality with valid credentials");
+		sw.launchBrowser("https://www.spicejet.com/");
 		sw.loginSpicejet("9688741481", "Sadhumaa@123");
 		Reports.reportStep("PASS", "Login with valid credentials passed");
 		

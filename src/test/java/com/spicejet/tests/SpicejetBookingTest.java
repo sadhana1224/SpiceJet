@@ -31,7 +31,7 @@ public class SpicejetBookingTest extends SeWrappers{
 			sw.bookingFlights("Sadhana", "Logesh", "9688741481", "sadhu.lokii1924@gmail.com", "Bangalore","Logesh","mani","8870140494","suba","natraj","9750645623");
 			Reports.reportStep("PASS", "Search with valid credentials passed");
 			Thread.sleep(2000);
-			//screenshot("OneWay_valid");
+			screenshot("FlightBooking");
 		}
 		catch(Exception ex)
 		{
@@ -40,9 +40,5 @@ public class SpicejetBookingTest extends SeWrappers{
 		}
 	}
 
-@AfterMethod
-public void closeBrowser()
-{
-	//driver.close();
-}
+
 }

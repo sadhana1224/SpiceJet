@@ -93,7 +93,7 @@ WebElement origin;
 	public void ChooseAdults()
 	{
 		
-		for(int i=1;i<=2;i++)
+		for(int i=1;i<2;i++)
 		{
 			if(click(adults))
 				Reports.reportStep("PASS","Choosed No.of adults");
@@ -143,10 +143,11 @@ WebElement origin;
 
 	}
 
-	public void searchFlights()
+	public void searchFlights() throws InterruptedException
 	{
 
 		actionClick(flights);
+		Thread.sleep(4000);
 
 	}
 

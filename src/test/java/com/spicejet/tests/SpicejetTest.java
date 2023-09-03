@@ -20,6 +20,7 @@ public class SpicejetTest extends SeWrappers{
 			Reports.startReport();
 			Reports.setTCDesc("Valid launchbrowser functionality");
 			launchBrowser("https://www.spicejet.com/");
+			
 		
 		}
 		catch(Exception ex)
@@ -28,11 +29,7 @@ public class SpicejetTest extends SeWrappers{
 			Reports.reportStep("FAIL", "Problem broseTutorials page");
 		}
 	}
-	@AfterMethod
-	public void closeBrowser()
-	{
-		driver.close();
-	}
+	
 	
 
 }

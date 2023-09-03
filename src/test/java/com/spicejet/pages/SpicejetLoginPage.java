@@ -47,9 +47,11 @@ public class SpicejetLoginPage extends SeWrappers {
 		else
 			Reports.reportStep("FAIL","Login button not clicked");
 	}
-	public void visibleUsername()
+	public void visibleUsername() throws InterruptedException
 	{
 		waitForMe(visiblename, 20);
+		
+		Thread.sleep(8000);
 	}
 	
 	

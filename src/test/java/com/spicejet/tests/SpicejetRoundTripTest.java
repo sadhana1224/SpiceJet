@@ -29,7 +29,7 @@ public class SpicejetRoundTripTest  extends SeWrappers{
 			sw.RoundTripFlight(20,10);
 			Reports.reportStep("PASS", "Search RoundTripFlight passed");
 			Thread.sleep(2000);
-			//screenshot("OneWay_valid");
+		   screenshot("RoundTrip");
 		}
 		catch(Exception ex)
 		{
@@ -37,9 +37,5 @@ public class SpicejetRoundTripTest  extends SeWrappers{
 			ex.printStackTrace();
 		}
 	}
-	@AfterMethod
-	public void closeBrowser()
-	{
-		driver.close();
-	}
+	
 }
