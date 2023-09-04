@@ -12,6 +12,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -19,6 +21,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
@@ -34,12 +38,24 @@ public class SeWrappers {
 
 	//Launch browser for the specified url
 	//parameter-> url
+	
 	public void launchBrowser(String url)
 	{
 		try
 		{
 			ChromeOptions opt=new ChromeOptions();
 			opt.addArguments("--disable-notifications");
+		/*	EdgeOptions opt1=new EdgeOptions();
+			opt1.addArguments("--disable-notifications");
+			if(browserName.equals("chrome"))
+			{
+				driver= new ChromeDriver(opt);
+			}
+			else if(browserName.equals("edge"))
+			{
+				driver= new EdgeDriver(opt1);
+			}
+			*/
 			driver=new ChromeDriver(opt);
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -172,7 +188,7 @@ public class SeWrappers {
 
 
 	//explicit wait
-	public void waitForMe(WebElement ele, int timeout)
+	public boolean waitForMe(WebElement ele, int timeout)
 	{
 		try
 		{
@@ -186,6 +202,7 @@ public class SeWrappers {
 			System.out.println("problem in explicit wait");
 			ex.printStackTrace();
 		}
+		return true;
 	}
 	//explicit wait
 	public void waitForMe1(WebElement ele, int timeout)

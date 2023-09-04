@@ -1,6 +1,7 @@
 package com.spicejet.tests;
 
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.spicejet.utils.SeWrappers;
@@ -26,10 +27,14 @@ public class SpicejetTest extends SeWrappers{
 		catch(Exception ex)
 		{
 			ex.printStackTrace();
-			Reports.reportStep("FAIL", "Problem broseTutorials page");
+			Reports.reportStep("FAIL", "Problem in launchBrowser");
 		}
 	}
 	
-	
+	@AfterMethod
+	public void closeBrowsers()
+	{
+		closeAllBrowsers();
+	}
 
 }

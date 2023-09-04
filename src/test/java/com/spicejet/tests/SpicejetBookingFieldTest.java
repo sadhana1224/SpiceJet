@@ -1,5 +1,6 @@
 package com.spicejet.tests;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 
@@ -31,7 +32,7 @@ public class SpicejetBookingFieldTest extends SeWrappers{
 			ex.printStackTrace();
 		}
 	}
-	@AfterSuite
+	@AfterMethod
 	public void closeBrowsers()
 	{
 		closeAllBrowsers();

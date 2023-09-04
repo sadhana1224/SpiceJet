@@ -37,6 +37,11 @@ public class SpicejetOneWayTest extends SeWrappers{
 		}
 	}
 	
-
+@AfterMethod
+public void closeBrowsers() throws InterruptedException
+{
+	Thread.sleep(3000);
+	closeAllBrowsers();
+}
 
 }

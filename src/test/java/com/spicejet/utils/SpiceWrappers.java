@@ -4,6 +4,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.spicejet.pages.SpicejetLoginPage;
+import com.spicejet.pages.SpicejetLogin_NegativePage;
 import com.spicejet.pages.SpicejetSignupPage;
 import com.spicejet.pages.SearchFlightOneWay_Page;
 import com.spicejet.pages.SearchFlightTwoWay_page;
@@ -100,12 +101,31 @@ public class SpiceWrappers extends SeWrappers{
 	    	ex.printStackTrace();
 	    }
 	}
+	public void dummyPayment(String cnum,String cname,String mon,String yr,String cvv)
+	{
+		try
+		{
+			SpicejetBookingPage sbPage1=PageFactory.initElements(driver, SpicejetBookingPage.class);
+			sbPage1.dummyPayment(cnum, cname, mon, yr, cvv);
+		}
+		catch(Exception ex)
+	    {
+	    	ex.printStackTrace();
+	    }
+	}
 	public void validateBookingField() throws InterruptedException
 	{
 		
 		SpicejetBookingFieldPage sbfPage=PageFactory.initElements(driver, SpicejetBookingFieldPage.class);
 		sbfPage.bookingFields();
 
+	}
+	
+	//negative testcase
+	public void login_invalidCredentials(String phnum,String pwd) throws InterruptedException
+	{
+		SpicejetLogin_NegativePage snPage=PageFactory.initElements(driver, SpicejetLogin_NegativePage.class);
+		snPage.login_invalidCredentials(phnum,pwd);
 	}
 
 }

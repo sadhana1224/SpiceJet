@@ -49,8 +49,22 @@ public class SpicejetBookingPage extends SeWrappers {
 	WebElement sphnum;
 	//continue to add-ons
 	@FindBy(xpath="//div[@data-testid='traveller-info-continue-cta']")
-	WebElement adsClick;		
-
+	WebElement adsClick;
+	
+	//dummy payment
+	@FindBy(xpath="//input[@id='card_number']")
+	WebElement cardnumber;	
+	@FindBy(xpath="//input[@id='name_on_card']")
+	WebElement cardname;
+	@FindBy(xpath="//input[@id='card_exp_month']")
+	WebElement expirymonth;
+	@FindBy(xpath="//input[@id='card_exp_year']")
+	WebElement expiryYear;
+	@FindBy(xpath="//input[@id='security_code']")
+	WebElement cvvNum;
+	//proceed to pay
+	@FindBy(xpath="//div[text()='Proceed to pay']")
+	WebElement payButton;
 	public void BookingFlights()
 	{
 		actionClick(payment);
@@ -80,7 +94,17 @@ public class SpicejetBookingPage extends SeWrappers {
 		typeText(slname,selastName);
 		typeText(sphnum,sePhonnum);
 		click(adsClick);
-		
+		waitForMe(adsClick,10);		
+	}
+	
+	public void dummyPayment(String cnum,String cname,String mon,String yr,String cvv)
+	{
+		typeText(cardnumber,cnum);
+		typeText(cardname,cname);
+		typeText(expirymonth,mon);
+		typeText(expiryYear,yr);
+		typeText(cvvNum,cvv);
+		click(payButton);
 	}
 	}
 

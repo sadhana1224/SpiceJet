@@ -37,5 +37,10 @@ public class SpicejetRoundTripTest  extends SeWrappers{
 			ex.printStackTrace();
 		}
 	}
-	
+	@AfterMethod
+	public void closeBrowsers() throws InterruptedException
+	{
+		Thread.sleep(3000);
+		closeAllBrowsers();
+	}
 }

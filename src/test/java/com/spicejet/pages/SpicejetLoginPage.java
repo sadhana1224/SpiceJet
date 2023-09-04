@@ -49,9 +49,12 @@ public class SpicejetLoginPage extends SeWrappers {
 	}
 	public void visibleUsername() throws InterruptedException
 	{
-		waitForMe(visiblename, 20);
+		if(waitForMe(visiblename, 20))
+		Reports.reportStep("PASS","Login successfull");
+		else
+			Reports.reportStep("FAil","Login failed");
 		
-		Thread.sleep(8000);
+		Thread.sleep(5000);
 	}
 	
 	

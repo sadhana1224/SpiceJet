@@ -147,7 +147,7 @@ WebElement origin;
 	{
 
 		actionClick(flights);
-		Thread.sleep(4000);
+		Thread.sleep(8000);
 
 	}
 

@@ -85,6 +85,6 @@ public class SearchFlightTwoWay_page extends SeWrappers {
 		click(currency);
 		click(country);
 		actionClick(flights);
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 	}
 }
