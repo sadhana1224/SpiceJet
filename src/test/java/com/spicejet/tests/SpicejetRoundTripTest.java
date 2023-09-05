@@ -2,6 +2,7 @@ package com.spicejet.tests;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.spicejet.utils.Reports;
@@ -12,12 +13,7 @@ public class SpicejetRoundTripTest  extends SeWrappers{
 	SpiceWrappers sw= new SpiceWrappers();
 	SeWrappers se= new SeWrappers();
 
-	@BeforeMethod
-	public void launchBrowser()
-	{
-		sw.launchBrowser("https://www.spicejet.com/");
-		sw.loginSpicejet("9688741481", "Sadhumaa@123");
-	}
+
 	@Test
 	
 	public void SearchRoundTripFlight()
@@ -26,6 +22,8 @@ public class SpicejetRoundTripTest  extends SeWrappers{
 		{
 			
 			Reports.setTCDesc("Validating Search RoundTripFlight functionality ");
+			sw.launchBrowser();
+			sw.loginSpicejet("9688741481", "Sadhumaa@123");
 			sw.RoundTripFlight(20,10);
 			Reports.reportStep("PASS", "Search RoundTripFlight passed");
 			Thread.sleep(2000);

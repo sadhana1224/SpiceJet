@@ -1,31 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-04T21:45:36 IST" name="Suite" finished-at="2023-09-04T21:45:53 IST" duration-ms="16890">
+  <suite started-at="2023-09-05T22:35:25 IST" name="Suite" finished-at="2023-09-05T22:38:06 IST" duration-ms="160704">
     <groups>
     </groups>
-    <test started-at="2023-09-04T21:45:36 IST" name="ChromeTest" finished-at="2023-09-04T21:45:53 IST" duration-ms="16890">
+    <test started-at="2023-09-05T22:35:25 IST" name="EdgeTest" finished-at="2023-09-05T22:38:06 IST" duration-ms="160704">
       <class name="com.spicejet.utils.Reports">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:com.spicejet.utils.Reports@1349883]" started-at="2023-09-04T21:45:36 IST" name="startReport" finished-at="2023-09-04T21:45:36 IST" duration-ms="491" status="PASS">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:com.spicejet.utils.Reports@2cb4893b]" started-at="2023-09-05T22:35:25 IST" name="startReport" finished-at="2023-09-05T22:35:25 IST" duration-ms="501" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:com.spicejet.utils.Reports@1349883]" started-at="2023-09-04T21:45:53 IST" name="endReport" finished-at="2023-09-04T21:45:54 IST" duration-ms="641" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.spicejet.utils.Reports@2cb4893b]" started-at="2023-09-05T22:38:06 IST" name="endReport" finished-at="2023-09-05T22:38:07 IST" duration-ms="650" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
       </class> <!-- com.spicejet.utils.Reports -->
-      <class name="com.spicejet.tests.SpicejetLogin_NegativeTest">
-        <test-method signature="loginInvalidCred()[pri:0, instance:com.spicejet.tests.SpicejetLogin_NegativeTest@6d4d66d2]" started-at="2023-09-04T21:45:36 IST" name="loginInvalidCred" finished-at="2023-09-04T21:45:53 IST" duration-ms="16548" status="PASS">
+      <class name="com.spicejet.tests.SpicejetBookingFieldTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.tests.SpicejetBookingFieldTest@18271936]" started-at="2023-09-05T22:36:52 IST" name="setUp" finished-at="2023-09-05T22:36:52 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginInvalidCred -->
-        <test-method is-config="true" signature="closeBrowsers()[pri:0, instance:com.spicejet.tests.SpicejetLogin_NegativeTest@6d4d66d2]" started-at="2023-09-04T21:45:53 IST" name="closeBrowsers" finished-at="2023-09-04T21:45:53 IST" duration-ms="283" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="validateBookingField()[pri:0, instance:com.spicejet.tests.SpicejetBookingFieldTest@18271936]" started-at="2023-09-05T22:36:52 IST" name="validateBookingField" finished-at="2023-09-05T22:37:16 IST" duration-ms="24468" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateBookingField -->
+        <test-method is-config="true" signature="closeBrowsers()[pri:0, instance:com.spicejet.tests.SpicejetBookingFieldTest@18271936]" started-at="2023-09-05T22:37:16 IST" name="closeBrowsers" finished-at="2023-09-05T22:37:16 IST" duration-ms="247" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowsers -->
-      </class> <!-- com.spicejet.tests.SpicejetLogin_NegativeTest -->
-    </test> <!-- ChromeTest -->
+      </class> <!-- com.spicejet.tests.SpicejetBookingFieldTest -->
+      <class name="com.spicejet.tests.SpicejetRoundTripTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.tests.SpicejetRoundTripTest@909217e]" started-at="2023-09-05T22:36:09 IST" name="setUp" finished-at="2023-09-05T22:36:09 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="SearchRoundTripFlight()[pri:0, instance:com.spicejet.tests.SpicejetRoundTripTest@909217e]" started-at="2023-09-05T22:36:09 IST" name="SearchRoundTripFlight" finished-at="2023-09-05T22:36:48 IST" duration-ms="39086" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchRoundTripFlight -->
+        <test-method is-config="true" signature="closeBrowsers()[pri:0, instance:com.spicejet.tests.SpicejetRoundTripTest@909217e]" started-at="2023-09-05T22:36:48 IST" name="closeBrowsers" finished-at="2023-09-05T22:36:52 IST" duration-ms="3331" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowsers -->
+      </class> <!-- com.spicejet.tests.SpicejetRoundTripTest -->
+      <class name="com.spicejet.tests.SpicejetLoginTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.tests.SpicejetLoginTest@72035809]" started-at="2023-09-05T22:35:36 IST" name="setUp" finished-at="2023-09-05T22:35:36 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginSpiceJet()[pri:0, instance:com.spicejet.tests.SpicejetLoginTest@72035809]" started-at="2023-09-05T22:35:36 IST" name="loginSpiceJet" finished-at="2023-09-05T22:36:09 IST" duration-ms="32769" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginSpiceJet -->
+        <test-method is-config="true" signature="closeBrowsers()[pri:0, instance:com.spicejet.tests.SpicejetLoginTest@72035809]" started-at="2023-09-05T22:36:09 IST" name="closeBrowsers" finished-at="2023-09-05T22:36:09 IST" duration-ms="304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowsers -->
+      </class> <!-- com.spicejet.tests.SpicejetLoginTest -->
+      <class name="com.spicejet.tests.SpicejetTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.tests.SpicejetTest@d737b89]" started-at="2023-09-05T22:35:25 IST" name="setUp" finished-at="2023-09-05T22:35:25 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="browserLaunch()[pri:0, instance:com.spicejet.tests.SpicejetTest@d737b89]" started-at="2023-09-05T22:35:25 IST" name="browserLaunch" finished-at="2023-09-05T22:35:36 IST" duration-ms="10678" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserLaunch -->
+        <test-method is-config="true" signature="closeBrowsers()[pri:0, instance:com.spicejet.tests.SpicejetTest@d737b89]" started-at="2023-09-05T22:35:36 IST" name="closeBrowsers" finished-at="2023-09-05T22:35:36 IST" duration-ms="250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowsers -->
+      </class> <!-- com.spicejet.tests.SpicejetTest -->
+      <class name="com.spicejet.tests.SpicejetBookingTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.spicejet.tests.SpicejetBookingTest@606e4010]" started-at="2023-09-05T22:37:16 IST" name="setUp" finished-at="2023-09-05T22:37:16 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="BookingFlight()[pri:0, instance:com.spicejet.tests.SpicejetBookingTest@606e4010]" started-at="2023-09-05T22:37:16 IST" name="BookingFlight" finished-at="2023-09-05T22:38:03 IST" duration-ms="46135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BookingFlight -->
+        <test-method is-config="true" signature="closeBrowsers()[pri:0, instance:com.spicejet.tests.SpicejetBookingTest@606e4010]" started-at="2023-09-05T22:38:03 IST" name="closeBrowsers" finished-at="2023-09-05T22:38:06 IST" duration-ms="3362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowsers -->
+      </class> <!-- com.spicejet.tests.SpicejetBookingTest -->
+    </test> <!-- EdgeTest -->
   </suite> <!-- Suite -->
 </testng-results>

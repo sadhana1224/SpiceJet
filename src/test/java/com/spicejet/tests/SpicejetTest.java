@@ -1,11 +1,13 @@
 package com.spicejet.tests;
 
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.spicejet.utils.SeWrappers;
 import com.spicejet.utils.SpiceWrappers;
+import com.spicejet.utils.Reports;
 import com.spicejet.utils.Reports;
 
 public class SpicejetTest extends SeWrappers{
@@ -13,16 +15,15 @@ public class SpicejetTest extends SeWrappers{
 	SpiceWrappers sw=new SpiceWrappers();
 	
 	//First testcase
-	@Test
+	@Test	
 	public void browserLaunch()
 	{
 		try
 		{
 			Reports.startReport();
 			Reports.setTCDesc("Valid launchbrowser functionality");
-			launchBrowser("https://www.spicejet.com/");
-			
-		
+			launchBrowser();
+				
 		}
 		catch(Exception ex)
 		{

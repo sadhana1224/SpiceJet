@@ -1,6 +1,7 @@
 package com.spicejet.tests;
 
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.spicejet.utils.Reports;
@@ -12,13 +13,13 @@ public class SpicejetLogin_NegativeTest extends SeWrappers
 	SpiceWrappers sw= new SpiceWrappers();
 	SeWrappers se= new SeWrappers();
 	//negative test case
-	@Test	
+	@Test		
 		public void loginInvalidCred()
 		{
 			try
 			{
 				Reports.setTCDesc("Validating login functionality with invalid credentials");
-				sw.launchBrowser("https://www.spicejet.com/");
+				sw.launchBrowser();
 				sw.login_invalidCredentials("9689523565", "Sadhumaa@123456");	
 				screenshot("login_invalid");
 			}

@@ -1,11 +1,9 @@
 
 package com.spicejet.utils;
 
-import java.io.File;
 import java.time.Duration;
 import java.util.Set;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -21,6 +20,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.openqa.selenium.JavascriptExecutor;
@@ -28,45 +31,48 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-/*
- * This class will contain all the wrapper methods for built in selenium methods
- */
 
 public class SeWrappers {
 
 	public static WebDriver driver=null;
+//@BeforeClass
+static String browsername;
 
-	//Launch browser for the specified url
-	//parameter-> url
+@BeforeClass
+@Parameters("browser")
+public void setUp(String browser) {
 	
-	public void launchBrowser(String url)
+    this.browsername = browser;
+}
+	
+	public void launchBrowser()
 	{
 		try
 		{
-			ChromeOptions opt=new ChromeOptions();
-			opt.addArguments("--disable-notifications");
-		/*	EdgeOptions opt1=new EdgeOptions();
-			opt1.addArguments("--disable-notifications");
-			if(browserName.equals("chrome"))
+			if(browsername.equalsIgnoreCase("chrome"))
 			{
-				driver= new ChromeDriver(opt);
+				ChromeOptions opt=new ChromeOptions();
+				opt.addArguments("--disable-notifications");
+				driver=new ChromeDriver(opt);
 			}
-			else if(browserName.equals("edge"))
+			else
 			{
-				driver= new EdgeDriver(opt1);
+				EdgeOptions opt=new EdgeOptions();
+				opt.addArguments("--disable-notifications");
+				driver=new EdgeDriver(opt);
 			}
-			*/
-			driver=new ChromeDriver(opt);
+			
+				
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-			driver.get(url);
-			Reports.reportStep("PASS", "The chrome browser launched successfully with the given url ("+url+")");
+			driver.get("https://www.spicejet.com/");
+			Reports.reportStep("PASS", "The chrome browser launched successfully with the given url ("+browsername+")");
 
 		}
 		catch(Exception ex)
 		{
-			//System.out.println("Problem in launching the browser");
-			Reports.reportStep("FAIL", "Problem while launching the chrome browser with the given url ("+url+")");
+			System.out.println("Problem in launching the browser");
+			Reports.reportStep("FAIL", "Problem while launching the chrome browser with the given url ("+browsername+")");
 			ex.printStackTrace();
 		}
 	}

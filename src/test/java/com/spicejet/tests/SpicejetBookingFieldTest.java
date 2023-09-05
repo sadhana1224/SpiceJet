@@ -2,6 +2,7 @@ package com.spicejet.tests;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.spicejet.utils.Reports;
@@ -12,15 +13,13 @@ public class SpicejetBookingFieldTest extends SeWrappers{
 	SpiceWrappers sw= new SpiceWrappers();
 	SeWrappers se= new SeWrappers();
 	
-	@Test
-	
+	@Test	
 	public void validateBookingField()
 	{
 		try
 		{
 			Reports.setTCDesc("Validating BookingFields functionality ");
-
-			sw.launchBrowser("https://www.spicejet.com/");
+			sw.launchBrowser();
 			sw.loginSpicejet("9688741481", "Sadhumaa@123");
 			sw.validateBookingField();
 			screenshot("BookingField");

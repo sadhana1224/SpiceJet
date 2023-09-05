@@ -1,5 +1,6 @@
 package com.spicejet.tests;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.spicejet.utils.Reports;
@@ -11,14 +12,15 @@ public class SpicejetSignUpTest extends SeWrappers {
 	SeWrappers se= new SeWrappers();
 
 	@Test
+	
 	public void signUpPage()
 	{
 		try
 		{
 			Reports.setTCDesc("Validating SignUp functionality with valid credentials");
-			sw.launchBrowser("https://www.spicejet.com/");
+			sw.launchBrowser();
 			sw.signupSpicejet("Sadhana", "Vengadashalam", "India", "9688741481","sadhu.lokii1924@gmail.com","Sadhumaa@123","Sadhumaa@123");
-			Reports.reportStep("PASS", "SignUp with valid credentials passed");
+		//	Reports.reportStep("PASS", "SignUp with valid credentials passed");
 
 			//screenshot("signup_valid");
 		}
