@@ -5,11 +5,13 @@ import org.testng.Assert;
 
 import com.spicejet.pages.SpicejetLoginPage;
 import com.spicejet.pages.SpicejetLogin_NegativePage;
+import com.spicejet.pages.SpicejetSignUp_NegativePage;
 import com.spicejet.pages.SpicejetSignupPage;
 import com.spicejet.pages.SearchFlightOneWay_Page;
 import com.spicejet.pages.SearchFlightTwoWay_page;
 import com.spicejet.pages.SpicejetBookingFieldPage;
 import com.spicejet.pages.SpicejetBookingPage;
+import com.spicejet.pages.SpicejetInPassesgerDet_NegativePage;
 
 
 
@@ -121,11 +123,32 @@ public class SpiceWrappers extends SeWrappers{
 
 	}
 	
-	//negative testcase
+	//negative testcase-1
 	public void login_invalidCredentials(String phnum,String pwd) throws InterruptedException
 	{
 		SpicejetLogin_NegativePage snPage=PageFactory.initElements(driver, SpicejetLogin_NegativePage.class);
 		snPage.login_invalidCredentials(phnum,pwd);
 	}
-
+//	negative testcase-2
+	public void login_emptyFieldPassword(String phnum1,String pwd1) throws InterruptedException
+	{
+		SpicejetLogin_NegativePage snPage1=PageFactory.initElements(driver, SpicejetLogin_NegativePage.class);
+		snPage1.login_emptyFieldPassword(phnum1, pwd1);
+	}
+//negative testcase-3
+	public void SignUp_invalidCredentials(String firstname,String lastname,String coun,String pnum,String emailid,String pswd,String repass) throws InterruptedException
+	{
+		
+		SpicejetSignUp_NegativePage signpage=PageFactory.initElements(driver, SpicejetSignUp_NegativePage.class);
+		signpage.signUp_invalidCredentials(firstname, lastname, coun, pnum, emailid, pswd, repass);
+	}
+//negative testcase-4
+	
+	public void invalid_passengerDetails(String phnum,String pwd) throws InterruptedException
+	{
+		SpicejetInPassesgerDet_NegativePage papge=PageFactory.initElements(driver, SpicejetInPassesgerDet_NegativePage.class);
+		papge.loginPage(phnum, pwd);
+		
+		
+	}
 }

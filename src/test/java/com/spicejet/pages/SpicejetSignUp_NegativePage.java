@@ -10,15 +10,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.spicejet.utils.Reports;
 import com.spicejet.utils.SeWrappers;
 
-public class SpicejetSignupPage extends SeWrappers{
-
+public class SpicejetSignUp_NegativePage extends SeWrappers {
+	
 	@FindBy(xpath="//div[contains(text(),'Signup')]")
 	WebElement clickSignup;
 	
 	@FindBy(xpath="//select[@class='form-control form-select ']")
 	WebElement choose;
 	
-	@FindBy(xpath="//input[@id='first_name' and @class='form-control ']")
+	@FindBy(xpath="//input[@id='first_name']")
 	WebElement name;
 	
 	@FindBy(xpath="//input[@id='last_name' and @class='form-control ']")
@@ -59,24 +59,22 @@ public class SpicejetSignupPage extends SeWrappers{
 	
 	@FindBy(xpath="(//a//button)[3]")
 	WebElement sub;
+	//error mesage
+	@FindBy(xpath="//div[contains(text(),'Please enter valid first name')]")
+	WebElement errormsg;
 	
-	@FindBy(xpath="//div[contains(text(),'Member account exists with given mobile number')]")
-	WebElement errorMsg;
-	
-	SeWrappers se= new SeWrappers();
-	public void signUpClick(String firstname,String lastname,String coun,String pnum,String emailid,String pswd,String repass) throws InterruptedException
+	public void signUp_invalidCredentials(String firstname,String lastname,String coun,String pnum,String emailid,String pswd,String repass) throws InterruptedException
 	{
 		click(clickSignup);
 		switchWindows();
 		Thread.sleep(2000);
+		
 		selectByIndex(choose, 2);
-		
-		Thread.sleep(2000); 
-		
+		Thread.sleep(2000);
 		waitForMe(name,20);
 		typeText(name, firstname);
-		typeText(lname, lastname);
 		
+		typeText(lname, lastname);
 		if(click(country))
 			Reports.reportStep("PASS","Country (India) choosed");
 		else 
@@ -84,6 +82,7 @@ public class SpicejetSignupPage extends SeWrappers{
 			Reports.reportStep("FAIL","Problem in Choosing country");
 		
 		
+//	typeText(country, coun);
 		click(clickDatePic);
 		
 		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
@@ -94,41 +93,34 @@ public class SpicejetSignupPage extends SeWrappers{
 		click(day);
 		//jsVerticalScroll(500);
 		typeText(phnum, pnum);
+		
 		click(clp);
 		Thread.sleep(2000);
 		click(email);
 		typeText(email, emailid);
-		
 		click(email);
-		Thread.sleep(2000);
+		
 		//waitForMe(pwd,30);
 		typeText(pwd, pswd);
 		
 		waitForMe(repwd,20);
 		typeText(repwd, repass);
 		
+		
 		jsClick(agreeButton);
-		
 		if(jsClick(sub))
-			Reports.reportStep("PASS","Clicked the submit button");
-			else 	
-				Reports.reportStep("FAIL","Problem in clicking submit button");
-			
-		
-		Thread.sleep(4000);
-		
-		if(errorMsg.isDisplayed())
-			Reports.reportStep("PASS","Member account exists with given mobile number, please login");
+		Reports.reportStep("PASS","Clicked the submit button");
 		else 	
-			Reports.reportStep("FAIL","signUp failed");
+			Reports.reportStep("FAIL","Problem in clicking submit button");
+		
+		if(errormsg.isDisplayed())
+			Reports.reportStep("PASS","Please Enter a valid details for SignUp Process");
+		else 
+			
+			Reports.reportStep("FAIL","SignUp done,Expected to Fail");
 		
 		
-	
+		Thread.sleep(8000);
 	}
-	
-	
-	
 
-	
-	
 }

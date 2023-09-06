@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.spicejet.utils.Reports;
 import com.spicejet.utils.SeWrappers;
 
 public class SpicejetBookingPage extends SeWrappers {
@@ -93,7 +94,10 @@ public class SpicejetBookingPage extends SeWrappers {
 		typeText(sname,seName);
 		typeText(slname,selastName);
 		typeText(sphnum,sePhonnum);
-		click(adsClick);
+		if(click(adsClick))
+			Reports.reportStep("PASS","Continue button clicked");
+		else
+			Reports.reportStep("FAIL","Continue button not clicked");
 		waitForMe(adsClick,10);		
 	}
 	

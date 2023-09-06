@@ -25,7 +25,9 @@ public class Reports
  */
 
 public static ExtentSparkReporter sparkReporter;
+
 public static ExtentReports extentReports;
+
 public static ExtentTest extentTest;
 
 
@@ -34,6 +36,7 @@ public static void startReport()
 {
 	try
 	{
+		//chrome
 		sparkReporter= new ExtentSparkReporter(System.getProperty("user.dir")+"/SpicejetWebAutomationReport.html");
 		sparkReporter.config().setDocumentTitle("Spicejet Web Automation Report");
 		sparkReporter.config().setReportName("SpiceJet Web Automation");
@@ -42,6 +45,9 @@ public static void startReport()
 		extentReports= new ExtentReports();
 		extentReports.attachReporter(sparkReporter);
 		
+		
+	
+	
 	}
 	catch(Exception ex)
 	{

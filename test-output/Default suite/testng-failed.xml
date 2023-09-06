@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.spicejet.tests.SpicejetSignUpTest">
+      <class name="com.spicejet.tests.SpicejetInvalidPassengerDet_Negativetest">
         <methods>
-          <include name="signUpPage"/>
-          <include name="launchBrowser"/>
+          <include name="SignUpInvalidCred"/>
+          <include name="setUp"/>
+          <include name="closeBrowsers"/>
         </methods>
-      </class> <!-- com.spicejet.tests.SpicejetSignUpTest -->
+      </class> <!-- com.spicejet.tests.SpicejetInvalidPassengerDet_Negativetest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

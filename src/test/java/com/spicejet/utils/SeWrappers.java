@@ -35,16 +35,15 @@ import org.openqa.selenium.TakesScreenshot;
 public class SeWrappers {
 
 	public static WebDriver driver=null;
-//@BeforeClass
-static String browsername;
+	static String browsername;
 
-@BeforeClass
-@Parameters("browser")
-public void setUp(String browser) {
-	
-    this.browsername = browser;
-}
-	
+	@BeforeClass
+	@Parameters("browser")
+	public void setUp(String browser)
+	{
+
+		this.browsername = browser;
+	}
 	public void launchBrowser()
 	{
 		try
@@ -61,8 +60,8 @@ public void setUp(String browser) {
 				opt.addArguments("--disable-notifications");
 				driver=new EdgeDriver(opt);
 			}
-			
-				
+
+
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 			driver.get("https://www.spicejet.com/");
@@ -136,8 +135,8 @@ public void setUp(String browser) {
 		{
 			waitForMe(ele,20);
 			ele.click();
-		//	Reports.reportStep("PASS", "Clicked on the given webelement successfully ");
-			
+			//	Reports.reportStep("PASS", "Clicked on the given webelement successfully ");
+
 
 		}
 		catch(Exception ex)
@@ -494,7 +493,7 @@ public void setUp(String browser) {
 		{
 			Actions act = new Actions(driver);
 			act.contextClick(ele).build().perform();
-			
+
 		}
 		catch(Exception ex)
 		{
@@ -640,7 +639,7 @@ public void setUp(String browser) {
 		}
 	}
 	//jsClick
-	public void jsClick(WebElement ele)
+	public boolean jsClick(WebElement ele)
 	{
 		try
 		{
@@ -655,8 +654,10 @@ public void setUp(String browser) {
 			Reports.reportStep("FAIL", "Problem in JavascriptExecutor click ");
 
 			ex.printStackTrace();
+			return false;
 		}
-		
+		return true;
+
 	}
 	//jstitle
 	public void jsTitle()
@@ -769,9 +770,9 @@ public void setUp(String browser) {
 	{
 		try
 		{
-//			File source= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//			File dest= new File(System.getProperty("user.dir")+"/screenshots/"+screenshotName+".png");
-//			FileUtils.copyFile(source, dest);			
+			//			File source= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			//			File dest= new File(System.getProperty("user.dir")+"/screenshots/"+screenshotName+".png");
+			//			FileUtils.copyFile(source, dest);			
 			Reports.takeScreeenShot(driver,screenshotName);
 			Reports.reportStep("PASS", "Successfully take the Screenshot");
 
@@ -783,7 +784,7 @@ public void setUp(String browser) {
 			ex.printStackTrace();
 		}
 	}
-	
+
 	//calender
 	public void calender(String month1,String year1,String date1)
 	{

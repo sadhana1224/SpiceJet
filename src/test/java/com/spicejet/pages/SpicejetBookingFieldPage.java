@@ -37,13 +37,14 @@ public class SpicejetBookingFieldPage extends SeWrappers {
 		else
 			Reports.reportStep("FAIL","Problem while validating the Check-In field");
 
+		Thread.sleep(2000);
 		//flight status
 		click(flightStatus);
 		if(eleStatus.isDisplayed())
 			Reports.reportStep("PASS","Flight status field successfully validated");
 		else
 			Reports.reportStep("FAIL","Problem while validating the Flight status field");
-
+		Thread.sleep(2000);
 		//manage booking
 		click(manageBooking);
 		if(bookingStatus.isDisplayed())

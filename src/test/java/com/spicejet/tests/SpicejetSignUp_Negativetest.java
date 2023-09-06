@@ -1,31 +1,28 @@
 package com.spicejet.tests;
 
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.spicejet.utils.Reports;
 import com.spicejet.utils.SeWrappers;
 import com.spicejet.utils.SpiceWrappers;
 
-public class SpicejetLogin_NegativeTest extends SeWrappers
+public class SpicejetSignUp_Negativetest extends SeWrappers
 {
 	SpiceWrappers sw= new SpiceWrappers();
 	SeWrappers se= new SeWrappers();
 	//negative test case
 	@Test		
-		public void loginInvalidCred()
+		public void SignUpInvalidCred()
 		{
 			try
 			{
-				Reports.setTCDesc("Validating login functionality with invalid credentials");
+				Reports.setTCDesc("Validating SignUp functionality with invalid credentials");
 				sw.launchBrowser();
-				sw.login_invalidCredentials("9689523565", "Sadhumaa@123456");
-				screenshot("login_invalid");
+				sw.SignUp_invalidCredentials("Sad@", "v", "India", "9688741481", "abc@gmail", "Sadhu123","Sadhu123");
+				//screenshot("login_invalid");
 				
-				Reports.setTCDesc("Validating login with empty Field Password");
-				sw.login_emptyFieldPassword("9688741481", "");
-				screenshot("login_emptyFieldPwd");
+				
 			}
 			catch(Exception ex)
 			{
@@ -40,3 +37,4 @@ public class SpicejetLogin_NegativeTest extends SeWrappers
 		closeAllBrowsers();
 	}
 }
+
