@@ -4,11 +4,11 @@
   <test  name="ChromeTest">
 	<parameter name="browser" value="chrome"/>
     <classes>
- 	
+ <!--	
 <class name="com.spicejet.tests.SpicejetSignUp_Negativetest"/>
 <class name="com.spicejet.tests.SpicejetLogin_NegativeTest"/> 
 <class name="com.spicejet.tests.SpicejetInvalidPassengerDet_Negativetest"/> 
-
+-->
 			
 	<class name="com.spicejet.tests.SpicejetTest"/> 
     <class name="com.spicejet.tests.SpicejetSignUpTest"/>
@@ -16,6 +16,10 @@
 	<class name="com.spicejet.tests.SpicejetRoundTripTest"/>			
 	<class name="com.spicejet.tests.SpicejetBookingFieldTest"/> 
 	<class name="com.spicejet.tests.SpicejetBookingTest"/>	
+	
+	
+<class name="com.spicejet.tests.SpicejetLogin_NegativeTest"/> 
+<class name="com.spicejet.tests.SpicejetInvalidPassengerDet_Negativetest"/>
 	<class name="com.spicejet.utils.Reports" />
 		 	
 		<!--	<class name="com.spicejet.tests.SpicejetOneWayTest"/>	
