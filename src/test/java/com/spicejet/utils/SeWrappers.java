@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -54,11 +55,17 @@ public class SeWrappers {
 				opt.addArguments("--disable-notifications");
 				driver=new ChromeDriver(opt);
 			}
-			else
+			else if(browsername.equalsIgnoreCase("edge"))
 			{
 				EdgeOptions opt=new EdgeOptions();
 				opt.addArguments("--disable-notifications");
 				driver=new EdgeDriver(opt);
+			}
+			else
+			{
+				FirefoxOptions options = new FirefoxOptions();
+				options.addArguments("--disable-notifications");
+				driver = new FirefoxDriver(options);
 			}
 
 
