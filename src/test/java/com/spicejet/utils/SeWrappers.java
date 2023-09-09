@@ -493,6 +493,22 @@ public class SeWrappers {
 			ex.printStackTrace();
 		}
 	}
+	//action sendkeys
+	public void actionSendkeys(WebElement ele,String text)
+	{
+
+		try
+		{
+			Actions act=new Actions(driver);	
+			act.sendKeys(ele, text).build().perform();
+		}
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
+
+	}
+
 	//right click	
 	public void rightClick(WebElement ele)
 	{
@@ -687,7 +703,7 @@ public class SeWrappers {
 		try
 		{
 			JavascriptExecutor js=(JavascriptExecutor)driver;
-			js.executeScript("arguments[0].value='+text+';",ele);
+			js.executeScript("arguments[0].value='"+text+"';",ele);
 		}
 		catch(Exception ex)
 		{

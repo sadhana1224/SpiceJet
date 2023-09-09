@@ -8,10 +8,10 @@ import com.spicejet.utils.Reports;
 import com.spicejet.utils.SeWrappers;
 
 public class SpicejetBookingPage extends SeWrappers {
-	
+
 	@FindBy(xpath="//div[@data-testid='continue-search-page-cta']")
 	WebElement payment;
-	
+
 	//passengers page
 	//contact details
 	@FindBy(xpath="//*[@data-testid='title-contact-detail-card']")
@@ -51,8 +51,15 @@ public class SpicejetBookingPage extends SeWrappers {
 	//continue to add-ons
 	@FindBy(xpath="//div[@data-testid='traveller-info-continue-cta']")
 	WebElement adsClick;
-	
+
+	@FindBy(xpath=("//div[@data-testid='add-ons-continue-footer-button'][3]"))
+	WebElement continueADD;
+
+	@FindBy(id="skipfrompopup")
+	WebElement skip;
+
 	//dummy payment
+	/*
 	@FindBy(xpath="//input[@id='card_number']")
 	WebElement cardnumber;	
 	@FindBy(xpath="//input[@id='name_on_card']")
@@ -66,6 +73,35 @@ public class SpicejetBookingPage extends SeWrappers {
 	//proceed to pay
 	@FindBy(xpath="//div[text()='Proceed to pay']")
 	WebElement payButton;
+	*/
+	@FindBy(xpath="//iframe[@class='card_number_iframe']")
+	WebElement FrameCard;
+	@FindBy(xpath="//input[@id='card_number']")
+	WebElement cardno;
+	
+	@FindBy(xpath="//*[@class='name_on_card_iframe']")
+	WebElement frameName;
+	@FindBy(xpath="//*[@placeholder='Cardholder Name']")
+	WebElement cardname;
+	
+	@FindBy(xpath="//*[@class='card_exp_month_iframe']")
+	WebElement frameMonth;
+	@FindBy(xpath="//*[@placeholder='MM']")
+	WebElement expmonth;
+	
+	@FindBy(xpath="//*[@class='card_exp_year_iframe']")
+	WebElement frameYear;
+	@FindBy(xpath="//*[@placeholder='YY']")
+	WebElement expYear;
+	
+	@FindBy(xpath="//*[@class='security_code_iframe']")
+	WebElement frameCvv;
+	@FindBy(xpath="//*[@placeholder='123']")
+	WebElement cvvNo;
+	
+	@FindBy(xpath="//div[@data-testid='common-proceed-to-pay']")
+	WebElement procedPayBtn;
+	
 	public void BookingFlights()
 	{
 		actionClick(payment);
@@ -98,18 +134,39 @@ public class SpicejetBookingPage extends SeWrappers {
 			Reports.reportStep("PASS","Continue button clicked");
 		else
 			Reports.reportStep("FAIL","Continue button not clicked");
-		waitForMe(adsClick,10);		
+		jsClick(continueADD);
+		jsClick(skip);
 	}
-	
+
 	public void dummyPayment(String cnum,String cname,String mon,String yr,String cvv)
 	{
+		
+		
+		/*
 		typeText(cardnumber,cnum);
 		typeText(cardname,cname);
 		typeText(expirymonth,mon);
 		typeText(expiryYear,yr);
 		typeText(cvvNum,cvv);
 		click(payButton);
+		*/
+		frameByWebElement(FrameCard);
+		typewithoutSendKeys(cardno,cnum);
+		driver.switchTo().defaultContent();
+		frameByWebElement(frameName);
+		actionSendkeys(cardname,cname);
+		driver.switchTo().defaultContent();
+		frameByWebElement(frameMonth);
+		actionSendkeys(expmonth,mon);
+		driver.switchTo().defaultContent();
+		frameByWebElement(frameYear);
+		actionSendkeys(expYear,yr);
+		driver.switchTo().defaultContent();
+		frameByWebElement(frameCvv);
+		actionSendkeys(cvvNo,cvv);
+		driver.switchTo().defaultContent();
+		click(procedPayBtn);
 	}
-	}
+}
 
 

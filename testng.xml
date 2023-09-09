@@ -5,10 +5,9 @@
   <test  name="ChromeTest">
 	<parameter name="browser" value="chrome"/>
     <classes>
- <!--	
-<class name="com.spicejet.tests.SpicejetSignUp_Negativetest"/>
+
  
--->
+
 			
 	 	<class name="com.spicejet.tests.SpicejetTest"/> 
 	<class name="com.spicejet.tests.SpicejetLoginTest"/>
@@ -19,6 +18,7 @@
 	
 <class name="com.spicejet.tests.SpicejetLogin_NegativeTest"/> 
 <class name="com.spicejet.tests.SpicejetInvalidPassengerDet_Negativetest"/>
+
 	<class name="com.spicejet.utils.Reports" />
 		 	
 		<!--	<class name="com.spicejet.tests.SpicejetOneWayTest"/>	-->
