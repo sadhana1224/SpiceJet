@@ -59,21 +59,7 @@ public class SpicejetBookingPage extends SeWrappers {
 	WebElement skip;
 
 	//dummy payment
-	/*
-	@FindBy(xpath="//input[@id='card_number']")
-	WebElement cardnumber;	
-	@FindBy(xpath="//input[@id='name_on_card']")
-	WebElement cardname;
-	@FindBy(xpath="//input[@id='card_exp_month']")
-	WebElement expirymonth;
-	@FindBy(xpath="//input[@id='card_exp_year']")
-	WebElement expiryYear;
-	@FindBy(xpath="//input[@id='security_code']")
-	WebElement cvvNum;
-	//proceed to pay
-	@FindBy(xpath="//div[text()='Proceed to pay']")
-	WebElement payButton;
-	*/
+	
 	@FindBy(xpath="//iframe[@class='card_number_iframe']")
 	WebElement FrameCard;
 	@FindBy(xpath="//input[@id='card_number']")
@@ -142,14 +128,7 @@ public class SpicejetBookingPage extends SeWrappers {
 	{
 		
 		
-		/*
-		typeText(cardnumber,cnum);
-		typeText(cardname,cname);
-		typeText(expirymonth,mon);
-		typeText(expiryYear,yr);
-		typeText(cvvNum,cvv);
-		click(payButton);
-		*/
+		
 		frameByWebElement(FrameCard);
 		typewithoutSendKeys(cardno,cnum);
 		driver.switchTo().defaultContent();
