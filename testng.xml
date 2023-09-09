@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite" thread-count="5">
-	
+	<!--
   <test  name="ChromeTest">
 	<parameter name="browser" value="chrome"/>
     <classes>
@@ -21,12 +21,12 @@
 
 	<class name="com.spicejet.utils.Reports" />
 		 	
-		<!--	<class name="com.spicejet.tests.SpicejetOneWayTest"/>	-->
+	
 			
 				
-    </classes>   
+   </classes>   
      </test> 
-  <!--
+  -->
   
   <test  name="EdgeTest">
 	  <parameter name="browser" value="edge"/>
@@ -43,7 +43,7 @@
 <class name="com.spicejet.tests.SpicejetInvalidPassengerDet_Negativetest"/>
 	<class name="com.spicejet.utils.Reports" />		
     </classes>  
-	  </test>--> 
+	  </test>
 
   
 </suite> 
