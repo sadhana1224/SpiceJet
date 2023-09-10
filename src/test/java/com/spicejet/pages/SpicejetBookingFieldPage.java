@@ -52,7 +52,7 @@ public class SpicejetBookingFieldPage extends SeWrappers {
 		else
 			Reports.reportStep("FAIL","Problem while validating the Manage Booking  field");
 		
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 
 	}
 
